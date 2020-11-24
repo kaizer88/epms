@@ -1,0 +1,76 @@
+ <div class="wrapper wrapper-content animated fadeInRight" id="new_kpi_form" style="display: none">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li><a class="nav-link active" data-toggle="tab" href="#new_staff_kpi"> Add Key Performance Indicator</a></li>
+                    <li><a class="nav-link" data-toggle="tab" href="#staff_kpis" id="my_indicators">My KPIs</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="new_staff_kpi" class="tab-pane active">
+                        <div class="panel-body">
+                            <div class="ibox ">
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <form role="form">
+                                                 {% csrf_token %}
+                                                 <input type="hidden" id="staff_kpi_kra" value="">
+                                                <div class="form-group"><label for="staff_kpi">Key Performance Indicator</label>
+                                                    <textarea class="form-control" id="staff_kpi" maxlength="500" rows="5"></textarea>
+                                                </div>
+                                                <div class="input-group"><span class="input-group-prepend">
+                                                    <button type="button" class="btn btn-outline btn-success" data-toggle="modal"
+                                                    data-target="#outputs_kras_modal" id="view_kras">Attach KRA</button> </span>
+                                                    <input type="text" class="form-control staff_kpi_kra" readonly>
+                                                 </div>
+                                            </form>
+                                        </div>
+                                         <div class="col-lg-4">
+                                             <form>
+                                                 <div class="row">
+                                                     <div class="input-group col-lg-4"><label for="staff_kpi_weight">Weight</label>
+                                                        <input type="text" id="staff_kpi_weight" class="form-control">
+                                                     </div>
+                                                 </div>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <button type="button" class="btn btn-primary" id="NULL">Save and Continue Editing</button>
+                                            <button type="button" class="btn btn-primary " id="save_staff_kpi">Save and Exit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="staff_kpis" class="tab-pane">
+                        <div class="panel-body">
+                            <div class="ibox-content">
+                                <label for="output">My Key Performance Indicators</label>
+                                 <table class="table table-bordered">
+                                     <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th width="40%">KPI</th>
+                                        <th>Weight</th>
+                                        <th>Delete</th>
+                                    </thead>
+                                    <tbody id="indicators_list">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

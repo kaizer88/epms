@@ -1,0 +1,124 @@
+
+
+<div class="wrapper wrapper-content animated fadeInRight" id="update_emp_project" style="display: none">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Update Project<small> Programmes and Project Management</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-6 b-r">
+
+                            <form role="form">
+                             {% csrf_token %}
+                             <input type="hidden" id="pro_id" value="">
+                                 <div class="form-group">
+                                <label for="update_programme">Programme</label>
+                                <input type="text" class="form-control " id="update_programme" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="update_branch">Branch</label>
+                                <input type="text" class="form-control " id="update_branch" value=""  />
+                            </div>
+                            <div class="form-group">
+                                    <label for="update_project_type">Project Type</label>
+                                        <input type="text" class="form-control " id="update_project_type" value="" />
+                             </div>
+                            <div class="form-group">
+                                <label for="update_project_start">Project Start Date</label>
+                                <input type="text" class="form-control " id="update_project_start" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="update_project_end">Project End Date</label>
+                                <input type="text" class="form-control " id="update_project_end" value="" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update_budget">Budget</label>
+                                <input type="text" class="form-control " id="update_budget" value=""  />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update_plan">Plan </label>
+                                <input type="file" class="form-control-file" id="update_plan" value="" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update_templates">Templates</label>
+                                <input type="file" class="form-control-file" id="update_templates" value=""/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update_sponsor">Project Sponsor</label>
+                                <input type="text" class="form-control " id="update_sponsor" value="" />
+                            </div>
+                            <div class="form-group signature">
+                                <label for="sign_proj">Sign</label>
+                                <input type="checkbox" id="sign_proj" class="form-control" style="display: none">
+                                <a href="#"><i class="fas fa-file-signature fa-4x sign"></i></a>
+                            </div>
+
+                            </form>
+
+                            </div>
+                            <div class="col-lg-6">
+                             <form role="form" method="post" enctype="multipart/form-data">
+                                  {% csrf_token %}
+
+
+                            <div class="form-group">
+                                <label for="update_project_name">Project Name</label>
+                                <input type="text" class="form-control " id="update_project_name" value="" />
+                            </div>
+                             <div class="form-group">
+                            <label for="con_manager">Project Manager</label>
+                            <input type="text" class="form-control " id="update_pm" value=""  />
+                            </div>
+                            <div class="form-group">
+                                <label for="update_component">Component</label>
+                                <input type="text" class="form-control " id="update_component"  value=""  />
+                            </div>
+                            <div class="form-group">
+                                <label for="update_risk">Project Risk</label>
+                                <textarea class="form-control " id="update_risk"  maxlength="500" rows="5"></textarea>
+
+                            </div>
+                             <div class="form-group">
+                                <label for="update_status">Status</label>
+                                <select class="form-control" id="update_status" ></select>
+                            </div>
+
+                             <div class="form-group">
+                                <label for="update_comments">Comments</label>
+                                <textarea class="form-control " id="update_comments"  maxlength="500" rows="5"></textarea>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="update_details">Details</label>
+                                <textarea class="form-control " id="update_details"  maxlength="500" rows="5"></textarea>
+                            </div>
+
+                             </form>
+
+                        </div>
+                        <div class="modal-footer ">
+                        <button type="button" class="btn btn-primary" id="NULL">Save and Continue Editing</button>
+                        <button type="button" class="btn btn-primary " id="updateProjectProgress">Save and Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

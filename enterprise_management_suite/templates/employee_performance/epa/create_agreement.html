@@ -1,0 +1,124 @@
+<div class="wrapper wrapper-content animated fadeInRight" id="pa_new" style="display: none">
+    <div class="row  border-bottom white-bg dashboard-header">
+    <div class="col-md-3">
+        <h3>Performance Agreement</h3>
+        <small>Employee Performance Management</small>
+    </div>
+    </div>
+    <div class="row  border-bottom white-bg dashboard-header">
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="tabs-container">
+                        <div class="tabs-right">
+                            <ul class="nav nav-tabs">
+                                <li><a class="nav-link active" data-toggle="tab" href="#tab-kra">Key Result Area</a></li>
+                                <li><a class="nav-link load_kras" data-toggle="tab" href="#tab-kpi">Key Performance Indicator</a></li>
+                                <li><a class="nav-link load_kpis" data-toggle="tab" href="#tab-target">Target</a></li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-kra" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <form role="form">
+                                            <input type="hidden" id="pa_id" value="">
+                                            <div class="form-group"><label for="kra"><strong>Key Result Area</strong></label>
+                                                 <textarea class="form-control" id="kra" maxlength="500" rows="5"></textarea>
+                                            </div>
+
+                                            <div class="form-group col-sm-3"><label for="weight">Weight</label>
+                                                <input type="text" id="weight"  class="form-control">
+                                            </div>
+                                             <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#kpiModal" id="display_kras">
+                                                View KRA
+                                            </button>
+                                            <button type="button" class="btn btn-primary"  id="saveKRA">Save</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div id="tab-kpi" class="tab-pane">
+                                    <div class="panel-body">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label for="kra_list">Select <strong>Key Result Area</strong></label>
+                                                <select name="kra_list" id="kra_list" class="form-control">
+                                                    <option value="None" selected="Selected">Select KRA</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                            <div class="form-group"><label for="staff_kpi">Key Performance Indicator</label>
+                                                  <textarea class="form-control" id="staff_kpi" maxlength="500" rows="5"></textarea>
+                                            </div>
+
+                                            <div class="form-group col-sm-3"><label for="staff_kpi_weight">Weight</label>
+                                                <input type="text" id="staff_kpi_weight"  class="form-control">
+                                            </div>
+
+                                             <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#kpiModal" id="display_kpis">
+                                                View KRA
+                                            </button>
+                                            <button type="button" class="btn btn-primary"  id="save_staff_kpi">Save</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div id="tab-target" class="tab-pane">
+                                    <div class="panel-body">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <div class="form-group"><label for="kpi_list">Select <strong>Key Performance Indicator</strong></label>
+                                                <select name="kpi_list" id="kpi_list" class="form-control">
+                                                    <option value="None" selected="Selected">Select KPI</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                            <div class="form-group"><label for="target">Target</label>
+                                                <textarea class="form-control" id="target" maxlength="500" rows="5" ></textarea>
+                                            </div>
+                                             <div class="form-group"><label for="baseline">Baseline</label>
+                                                <textarea class="form-control" id="baseline" maxlength="500" rows="5" ></textarea>
+                                            </div>
+                                            <div class="form-group"><label for="evidence"> Evidence</label>
+                                                <textarea class="form-control" id="evidence" maxlength="500" rows="5" ></textarea>
+                                            </div>
+                                            <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                            data-target="#targetsModal" id="display_targets">
+                                                        View Target
+                                            </button>
+                                            <button type="button" class="btn btn-primary"  id="save_target">Save</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+</div>

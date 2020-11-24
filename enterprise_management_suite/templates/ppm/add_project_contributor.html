@@ -1,0 +1,48 @@
+<div class="wrapper wrapper-content animated fadeInRight" id="add_contr" style="display: none">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Add Contributor<small> Programme and Projects Management</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                        <form role="form">
+                         {% csrf_token %}
+                            <div class="form-group">
+                            <label for="project">Project</label>
+                                <select name="project" id="project" class="form-control">
+                                    <option value="None" selected="Selected" >Select Project</option>
+                                </select>
+                            </div>
+                            <div class="form-group"><label for="employee_code">Employee Persal</label>
+                                <input type="text" id="employee_code"  class="form-control">
+                            </div>
+                            <div class="form-group"><label for="queue_pos">Authorisation Level</label>
+                                <input type="text" id="queue_pos"  class="form-control">
+                            </div>
+                            <div class="form-group"><label for="notes">Notes</label>
+                                <textarea class="form-control" id="notes" maxlength="500" rows="5"></textarea>
+                            </div>
+                             <button type="button" class="btn btn-primary" id="NULL">Save and Continue Editing</button>
+                            <button type="button" class="btn btn-primary " id="save_contr">Save and Exit</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
