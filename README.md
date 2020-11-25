@@ -1,4 +1,4 @@
-## Enterprise Performance Management System(EPMS)
+## Enterprise Performance Management System(EPMS) - [official demo app link](http://www.epms.cloud/)
 
 Installation / Setup on local machine
 # Windows and Unix Like:
@@ -21,11 +21,16 @@ environments you will have the project you recently cloned.
 ```
 cd enterprise_performance_management
 ```
-- Run the following command (it install django and other requirements:
-pip install -r requirements/local.txt
-- The project is ready. Now you can run it through your IDE or on the command line you run the following command:
-cd enterprise_management_suite
-python manage.py runserver localserver:8000
+
+# Quick way to run the application
+- Run python3 -m venv env
+- Run source env/bin/activate
+- Run pip3 install -r requirements/base.txt
+- cd to enterprise_performance_management
+- Run python3 manage.py migrate
+- Run python3 manage.py createsuper(follow instruction)
+- Run python3 manage.py runserver or python3 manage.py runserver:port
+- It will run and give you url for the app
 
 ## Application Overview
 
