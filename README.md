@@ -1,4 +1,4 @@
-## Enterprise Performance Management System(EPMS) - [official demo app link](http://www.epms.cloud/)
+## Enterprise Performance Management System(EPMS) - [official demo link](http://www.epms.cloud/)
 
 Installation / Setup on local machine
 # Windows and Unix Like:
