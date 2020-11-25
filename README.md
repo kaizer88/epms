@@ -16,12 +16,12 @@ path\to\env\Scripts\activate
 directory and label something like 'venvs' and create the environments there for each project. Along side the
 'venv' directory, will be the project directories.
 - Along side the virtual environments directory e.g' 'venvs' clone the project.
-- at this step, you should have the virtual environment and it should be activated. Next to the root of the virtual
+- At this step, you should have the virtual environment and it should be activated. Next to the root of the virtual
 environments you will have the project you recently cloned.
 ```
 cd enterprise_performance_management
 ```
-- run the following command (it install django and other requirements:
+- Run the following command (it install django and other requirements:
 pip install -r requirements/local.txt
 - The project is ready. Now you can run it through your IDE or on the command line you run the following command:
 cd enterprise_management_suite
