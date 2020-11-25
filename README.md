@@ -1,4 +1,4 @@
-## Enterprise Performance Management System
+## Enterprise Performance Management System(EPMS)
 
 Installation / Setup on local machine
 # Windows and Unix Like:
@@ -26,4 +26,38 @@ pip install -r requirements/local.txt
 - The project is ready. Now you can run it through your IDE or on the command line you run the following command:
 cd enterprise_management_suite
 python manage.py runserver localserver:8000
+
+## Application Overview
+
+- (EPMS) is a field of business performance management which considers the visibility of operations in a closed-loop model across all facets of the enterprise. Specific to financial activities in the office of the chief financial officer, EPMS also supports financial planning and analysis (FP&A). "Corporate performance management (CPM)" is a synonym for "enterprise performance management". It increased focus on planning, and the emergence of a new category of solutions supporting the management of the financial close.
+
+There are several modules. 
+These include:
+
+- Strategy & Planning
+- Annual Perfomance Plan
+- Budget
+- Programme and Project Management
+- Employee Perfomance Plan
+- Analytics
+- Reporting 
+
+# Strategy Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-89.png)
+
+# Annual Perfomance Plan Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-95.png)
+
+# Budget Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-33.png)
+
+# Programme and Project Management Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-47.png)
+
+# Employee Perfomance Plan Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-65.png)
+
+# Analytics Module
+![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-83.png)
+
 
