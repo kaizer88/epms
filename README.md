@@ -19,9 +19,7 @@ directory and label something like 'venvs' and create the environments there for
 - Along side the virtual environments directory e.g' 'venvs' clone the project.
 - At this step, you should have the virtual environment and it should be activated. Next to the root of the virtual
 environments you will have the project you recently cloned.
-```
-cd enterprise_performance_management
-```
+
 
 # Setting up environment
 ```
