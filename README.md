@@ -1,7 +1,8 @@
-## Enterprise Performance Management System(EPMS) - [official demo link](http://www.epms.cloud/)
+## Enterprise Performance Management System(EPMS)
+Here is an [official demo link](http://www.epms.cloud/).
 
-Installation / Setup on local machine
-# Windows and Unix Like:
+
+# Installation on Windows and Unix:
 
 - Download Python from the [official Python site](https://www.python.org/downloads/release/python-361/)
 - Install Python and add it to environmental variables
@@ -22,16 +23,26 @@ environments you will have the project you recently cloned.
 cd enterprise_performance_management
 ```
 
-# Quick way to run the application
-- Run python3 -m venv env
-- Run source env/bin/activate
-- Run pip3 install -r requirements/base.txt
-- cd to enterprise_performance_management
-- Run python3 manage.py migrate
-- Run python3 manage.py createsuper(follow instruction)
-- Run python3 manage.py runserver or python3 manage.py runserver:port
-- It will run and give you url for the app
-
+# Setting up environment
+```
+python3 -m venv env
+source env/bin/activate
+pip3 install -r requirements/base.txt
+```
+# Running application
+```
+cd enterprise_performance_management
+python3 manage.py migrate
+```
+Create a super user and follow the instructions:
+```
+python3 manage.py createsuper
+```
+Finally, run the server:
+```
+python3 manage.py runserver
+```
+The app should hosted on [localhost:8000](localhost:8000).
 ## Application Overview
 
 - (EPMS) is a field of business performance management which considers the visibility of operations in a closed-loop model across all facets of the enterprise. Specific to financial activities in the office of the chief financial officer, EPMS also supports financial planning and analysis (FP&A). "Corporate performance management (CPM)" is a synonym for "enterprise performance management". It increased focus on planning, and the emergence of a new category of solutions supporting the management of the financial close.
@@ -64,5 +75,4 @@ These include:
 
 # Analytics Module
 ![alt text](https://github.com/kaizer88/epms/blob/master/docs/epms/AwesomeScreenshot-Employee-Performance-Management-Suite-2019-07-17-10-07-83.png)
-
 
