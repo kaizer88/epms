@@ -1,9 +1,14 @@
 import uuid
 from datetime import datetime, date
 
+<<<<<<< HEAD
 # from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 # from django.shortcuts import render, redirect, render_to_response, get_object_or_404
+=======
+from django.shortcuts import render
+from django.shortcuts import render, redirect, render_to_response, get_object_or_404
+>>>>>>> master
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
@@ -13,7 +18,10 @@ from django.core.exceptions import ObjectDoesNotExist, ValidationError
 from .models import KRAReview, KeyResultArea, PerformanceAgreement, MeasurableOutput, TrainingNeed, ReviewPeriod, \
     KeyPerformanceIndicator, Target, ProcessedKRAReview
 from accounts.models import Employee, Supervisor, EPMUser
+<<<<<<< HEAD
 from .forms import PAForm
+=======
+>>>>>>> master
 # from .forms import ReviewForm, PAForm
 from organisation.models import FinancialYear
 

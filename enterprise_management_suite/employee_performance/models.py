@@ -1,7 +1,11 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 
+<<<<<<< HEAD
 # from accounts.models import Employee, Supervisor
+=======
+from accounts.models import Employee, Supervisor
+>>>>>>> master
 
 
 class TimeStampedModel(models.Model):
@@ -59,7 +63,11 @@ class MeasurableOutput(TimeStampedModel):
         (ANNUALLY, 'Annually')
     )
 
+<<<<<<< HEAD
     supervisor = models.ManyToManyField('accounts.Employee', related_name='kra_supervisor')
+=======
+    supervisor = models.ManyToManyField(Employee, related_name='kra_supervisor')
+>>>>>>> master
     mo_kra_id = models.UUIDField(max_length=50)
     output_id = models.UUIDField(max_length=50)
     output = models.TextField('Measurable Output')
@@ -151,8 +159,13 @@ class ReviewPeriod(TimeStampedModel):
 class KRAReview(TimeStampedModel):
 
     kra_id = models.UUIDField()
+<<<<<<< HEAD
     employee = models.ForeignKey('accounts.Employee', on_delete=models.CASCADE)
     supervisor = models.ManyToManyField('accounts.Employee', related_name='review_supervisor')
+=======
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    supervisor = models.ManyToManyField(Employee, related_name='review_supervisor')
+>>>>>>> master
     outputs = models.ManyToManyField(MOReview)
     dispute = models.TextField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
@@ -214,8 +227,13 @@ class KeyResultArea(TimeStampedModel):
     review = models.ForeignKey(KRAReview, on_delete=models.CASCADE, null=True, blank=True)
     kra_pa_id = models.UUIDField(max_length=50)
     kra_id = models.UUIDField(max_length=50, unique=True)
+<<<<<<< HEAD
     supervisor = models.ManyToManyField('accounts.Supervisor')
     employee = models.ManyToManyField('accounts.Employee')
+=======
+    supervisor = models.ManyToManyField(Supervisor)
+    employee = models.ManyToManyField(Employee)
+>>>>>>> master
     bathophele = models.ManyToManyField(Bathopele)
     outputs = models.ManyToManyField(MeasurableOutput)
     training_needs = models.ManyToManyField(TrainingNeed)
@@ -267,8 +285,13 @@ class CoreManagementCriteria(TimeStampedModel):
 class PerformanceAgreement(TimeStampedModel):
 
     pa_id = models.UUIDField(max_length=50, unique=True)
+<<<<<<< HEAD
     supervisor = models.ManyToManyField('accounts.Supervisor')
     employee = models.ManyToManyField('accounts.Employee')
+=======
+    supervisor = models.ManyToManyField(Supervisor)
+    employee = models.ManyToManyField(Employee)
+>>>>>>> master
     kras = models.ManyToManyField(KeyResultArea)
     employee_has_signed = models.BooleanField(default=False)
     supervisor_has_signed = models.BooleanField(default=False)

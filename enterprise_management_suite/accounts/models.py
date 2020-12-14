@@ -2,7 +2,11 @@ from django.db import models
 from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser)
 from django.utils.timezone import now
 
+<<<<<<< HEAD
 # from enterprise_management_suite.organisation.models import Organisation, Branch, Component, Programme
+=======
+from organisation.models import Organisation, Branch, Component, Programme
+>>>>>>> master
 
 
 class TimeStampedModel(models.Model):
@@ -189,10 +193,17 @@ class Employee(TimeStampedModel):
     )
 
     user = models.OneToOneField(EPMUser, on_delete=models.CASCADE)
+<<<<<<< HEAD
     organisation = models.ForeignKey('organisation.Organisation', on_delete=models.CASCADE, null=True)
     programme = models.ForeignKey('organisation.Programme', on_delete=models.CASCADE, null=True)
     branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE, null=True)
     component = models.ForeignKey('organisation.Component', on_delete=models.CASCADE, null=True)
+=======
+    organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE, null=True)
+    programme = models.ForeignKey(Programme, on_delete=models.CASCADE, null=True)
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, null=True)
+    component = models.ForeignKey(Component, on_delete=models.CASCADE, null=True)
+>>>>>>> master
     salary_notch = models.ForeignKey(SalaryNotch, on_delete=models.CASCADE, null=True)
     department = models.CharField(max_length=100,  null=True, blank=True)
     is_first_login = models.BooleanField(default=False)

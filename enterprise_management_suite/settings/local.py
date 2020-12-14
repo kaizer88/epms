@@ -14,6 +14,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'epms',
+<<<<<<< HEAD
         # 'USER': 'epmuser',
         'USER': 'postgres',
         'PASSWORD': 'Lihle@2016',
@@ -32,3 +33,11 @@ DATABASES = {
 #                     {% else %}
 #                         <td><a href="{% url 'system_reservations_emails_main:emails_display' booking_ref=message.booking_folder message_no=message.order%}">{{ message.folder }}</a></td>
 #                     {% endif %}
+=======
+        'USER': 'epmuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+>>>>>>> master
