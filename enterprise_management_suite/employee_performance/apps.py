@@ -1,5 +1,0 @@
-from django.apps import AppConfig
-
-
-class PerformanceConfig(AppConfig):
-    name = 'employee_performance'
