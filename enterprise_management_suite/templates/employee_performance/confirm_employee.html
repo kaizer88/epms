@@ -1,0 +1,25 @@
+{% extends "dashboard_base.html" %}
+
+{% block page %}
+<div id="page-wrapper">
+    <!-- /.row -->
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <form role="form" action="." method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-success">Confirm Employee</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+
+{% endblock %}

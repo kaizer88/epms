@@ -1,0 +1,266 @@
+{#<div  class="col-lg-10 card" id="contributor_project" style="display: none">#}
+{#    <div class="panel panel-default">#}
+{#        <div class="panel-heading">#}
+{#            <span class="pull-right closeWell close-icon" data-effect="fadeOut"><i class="fa fa-times"></i></span>#}
+{#            <h5>Project View</h5>#}
+{#        </div>#}
+{#        <div class="panel-body">#}
+{#            <div>#}
+{#                <form role="form" method="post" enctype="multipart/form-data" id="">#}
+{#                {% csrf_token %}#}
+{#                    <input type="hidden" class="form-control " id="number" value="" readonly/>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROGRAMME</label>#}
+{#                            <input type="text" class="form-control " id="con_programme" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>BRANCH</label>#}
+{#                            <input type="text" class="form-control " id="con_branch" value="" readonly />#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>COMPONENT</label>#}
+{#                            <input type="text" class="form-control " id="con_component"  value="" readonly />#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT TYPE</label>#}
+{#                            <input type="text" class="form-control " id="con_type" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-2">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT START</label>#}
+{#                            <input type="text" class="form-control " id="con_start_date" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-2">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT END</label>#}
+{#                            <input type="text" class="form-control " id="con_end_date" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT NAME</label>#}
+{#                            <input type="text" class="form-control " id="con_name" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>TEMPLATES</label>#}
+{#                            <input type="file" class="form-control-file" id="con_templates"#}
+{#                            value=""/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>SPONSOR</label>#}
+{#                            <input type="text" class="form-control " id="con_sponsor" value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>BUDGET</label>#}
+{#                            <input type="text" class="form-control " id="con_budget" value="" readonly />#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PLAN </label>#}
+{#                            <input type="file" class="form-control-file" id="plan"#}
+{#                            value="" readonly/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT MANAGER</label>#}
+{#                            <input type="text" class="form-control " id="con_manager" value="" readonly />#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>STATUS</label>#}
+{#                            <select class="form-control" id="con_status" readonly="">#}
+{##}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>PROJECT RISK</label>#}
+{#                            <textarea class="form-control " id="con_risk" readonly></textarea>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>COMMENTS</label>#}
+{#                            <textarea class="form-control " id="con_comments" readonly></textarea>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>DETAILS</label>#}
+{#                            <textarea class="form-control " id="con_details" readonly></textarea>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>APPROVE</label>#}
+{#                            <input type="radio" name="con_token" value="1" class="form-control " data-size="medium">#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="form-group">#}
+{#                            <label>REJECT</label><br>#}
+{#                            <input type="radio" name="con_token" value="2" class="form-control " data-size="medium">#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                     <div class="col-md-4">#}
+{#                        <button type="button" class="btn btn-w-m btn-primary" id="con_signed">Submit</button>#}
+{#                    </div>#}
+{#                </form>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+<div class="wrapper wrapper-content animated fadeInRight" id="contributor_project" style="display: none">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Project View<small> Programmes and Project Management</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-6 b-r">
+
+                    <form role="form" method="post" enctype="multipart/form-data">
+                         {% csrf_token %}
+                        <input type="hidden" class="form-control" id="number" value="" readonly/>
+                            <div class="form-group">
+                                <label for="con_programme">Programme</label>
+                                <input type="text" class="form-control " id="con_programme" value="" readonly/>
+                            </div>
+                            <div class="form-group">
+                                <label for="con_branch">Branch</label>
+                                <input type="text" class="form-control " id="con_branch" value="" readonly />
+                            </div>
+                            <div class="form-group">
+                                    <label for="con_type">Project Type</label>
+                                        <input type="text" class="form-control " id="con_type" value="" readonly/>
+                             </div>
+                            <div class="form-group">
+                                <label for="con_start_date">Project Start Date</label>
+                                <input type="text" class="form-control " id="con_start_date" value="" readonly/>
+                            </div>
+                            <div class="form-group">
+                                <label for="con_end_date">Project End Date</label>
+                                <input type="text" class="form-control " id="con_end_date" value="" readonly/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="con_budget">Budget</label>
+                                <input type="text" class="form-control " id="con_budget" value="" readonly />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="plan">Plan </label>
+                                <input type="file" class="form-control-file" id="plan" value="" readonly/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="con_templates">Templates</label>
+                                <input type="file" class="form-control-file" id="con_templates"
+                                value=""/>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Approve</label>
+                                <input type="radio" name="con_token" value="1" class="form-control " data-size="medium">
+                            </div>
+                            <div class="form-group">
+                                <label>Reject</label><br>
+                                <input type="radio" name="con_token" value="2" class="form-control " data-size="medium">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="con_sponsor">Project Sponsor</label>
+                                <input type="text" class="form-control " id="con_sponsor" value="" readonly/>
+                            </div>
+                            </form>
+
+                            </div>
+                            <div class="col-lg-6">
+                             <form role="form" method="post" enctype="multipart/form-data">
+                                  {% csrf_token %}
+
+
+                            <div class="form-group">
+                                <label for="con_name">Project Name</label>
+                                <input type="text" class="form-control " id="con_name" value="" readonly/>
+                            </div>
+                             <div class="form-group">
+                            <label for="con_manager">Project Manager</label>
+                            <input type="text" class="form-control " id="con_manager" value="" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="con_component">Component</label>
+                                <input type="text" class="form-control " id="con_component"  value="" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="con_risk">Project Risk</label>
+                                <textarea class="form-control " id="con_risk" readonly maxlength="500" rows="5"></textarea>
+
+                            </div>
+                             <div class="form-group">
+                                <label for="con_status">Status</label>
+                                <select class="form-control" id="con_status" readonly=""></select>
+                            </div>
+
+                             <div class="form-group">
+                                <label for="con_comments">Comments</label>
+                                <textarea class="form-control " id="con_comments" readonly maxlength="500" rows="5"></textarea>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="con_details">Details</label>
+                                <textarea class="form-control " id="con_details" readonly maxlength="500" rows="5"></textarea>
+                            </div>
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer ">
+                        <button type="button" class="btn btn-primary" id="NULL">Save and Continue Editing</button>
+                        <button type="button" class="btn btn-primary " id="con_signed">Save and Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

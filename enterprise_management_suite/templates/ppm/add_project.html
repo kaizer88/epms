@@ -1,0 +1,140 @@
+<div class="wrapper wrapper-content animated fadeInRight" id="capture_project" style="display: none">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Add Project <small>Programme and Project Management</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                <div class="col-lg-6 b-r">
+
+                    <form role="form">
+                     {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="programmes">Programme</label>
+                        <select name="programmes" id="programmes" class="form-control">
+                            <option value="None" selected="Selected" >Select Programme</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sub_programmes">Sub-Programme</label>
+                        <select name="sub_programmes" id="sub_programmes" class="form-control">
+                            <option value="None" selected="Selected" >Select Sub-Programme</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <input type="text" class="form-control" id="branch" readonly/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project_type">Project Type</label>
+                        <select id="project_type" name="project_type" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="project_start_date">Project Start Date</label>
+                        <input type="text" class="form-control " id="project_start_date" name="kra" />
+                    </div>
+                    <div class="form-group">
+                        <label for="project_end_date">Project End Date</label>
+                        <input type="text" class="form-control " id="project_end_date" name="kra" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <input type="text" class="form-control " id="budget" onkeyup="is_budget_format_valid(this.value);"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Plan </label>
+                        <input type="file" class="form-control-file" id="plan" value=""/>
+                    </div>
+                    <div class="form-group">
+                            <label for="templates">Templates</label>
+                            <input type="file" class="form-control-file" id="templates"
+                            value=""/>
+                        </div>
+                    </form>
+
+                </div>
+                    <div class="col-lg-6">
+                     <form role="form">
+                          {% csrf_token %}
+
+                        <div class="form-group">
+                            <div class="form-group">
+                            <label for="project_name">Project Name</label>
+                            <input type="text" class="form-control " id="project_name" />
+                        </div>
+                         <div class="form-group">
+                        <label for="component">Component</label>
+                        <input type="text" class="form-control " id="component" readonly />
+                        </div>
+                        <label>Reporting Cycle</label>
+                        <select class="form-control" id="reporting_cycle">
+                            <option value="default">Select Reporting Cycle</option>
+                            <option value="AN">Annually</option>
+                            <option value="QT">Quarterly</option>
+                        </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="risk">Project Risk</label>
+                            <textarea class="form-control " id="risk"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea class="form-control " id="comments" ></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Details</label>
+                            <textarea class="form-control " id="details" ></textarea>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sign_proj">Sign</label>
+                            <input type="checkbox" id="sign_proj" class="form-control" style="display: none">
+                        </div>
+                         <a href="#"><i class="fas fa-file-signature fa-4x sign"></i></a>
+                        <div class="form-group">
+                            <label for="sponsor">Sponsor</label>
+                            <input type="text" class="form-control" id="sponsor" />
+                        </div>
+                     </form>
+
+                    </div>
+                    <div class="modal-footer ">
+                    <button type="button" class="btn btn-primary" id="addAnotherProject">Save and Continue Editing</button>
+                    <button type="button" class="btn btn-primary " id="addProject">Save and Exit</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function is_budget_format_valid(budget){
+        var result = /^\d+(\.\d{1,2})?$/.test(budget);
+        if(result == false){
+            document.getElementById('addAnotherProject').disabled = true;
+
+        }else{
+            document.getElementById('addAnotherProject').disabled = false;
+        }
+
+
+    }
+</script>

@@ -1,0 +1,87 @@
+  <div class="wrapper wrapper-content animated fadeInRight" id="capture_pdp" style="display: none">
+    <div class="row">
+        <div class="col-lg-8">
+
+            <div class="tabs-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li><a class="nav-link active" data-toggle="tab" href="#newNeed"> New Training Need</a></li>
+                    <li><a class="nav-link" data-toggle="tab" href="#currNeed" id="trainingList">My Training Needs</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="newNeed" class="tab-pane active">
+                        <div class="panel-body">
+
+                            <div class="ibox ">
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-6 b-r">
+
+                                            <form role="form">
+                                                 {% csrf_token %}
+                                                 <input type="hidden" id="new_pdp_kra_id" value="">
+                                                <div class="form-group"><label for="t_type">Development Type</label>
+                                                    <textarea class="form-control" id="t_type" maxlength="500" rows="5"></textarea>
+                                                </div>
+                                                <div class="input-group m-b"><span class="input-group-prepend">
+                                                        <button type="button" class="btn btn-primary" id="view_pdp_kras"
+                                                                data-toggle="modal" data-target="#pdp_kras_modal">Add KRA</button>
+                                                        </span>
+                                                    <input type="text" class="form-control" id="pdp_kra_val" readonly>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <div class="col-lg-6">
+                                             <form role="form">
+                                                 {% csrf_token %}
+                                                    <div class="form-group"><label for="outcome">Expected Outcome</label>
+                                                    <textarea class="form-control" id="outcome" maxlength="500" rows="5"></textarea>
+                                                </div>
+
+                                                <div class="form-group"><label for="frame">Time Frame</label>
+                                                   <select class="form-control" id="frame">
+                                                        <option value="default">Select Time Frame</option>
+                                                        <option value="d">Daily</option>
+                                                        <option value="w">Weekly</option>
+                                                        <option value="m">Monthly</option>
+                                                        <option value="a">Annually</option>
+                                                    </select>
+                                                </div>
+                                             </form>
+                                        </div>
+                                        <div class="modal-footer ">
+                                        <button type="button" class="btn btn-primary" id="savePDPMany">Save and Continue Editing</button>
+                                        <button type="button" class="btn btn-primary " id="savePDP">Save and Exit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" id="currNeed" class="tab-pane">
+                            <div class="panel-body">
+                                <div class="ibox-content">
+                                 <div class="ibox ">
+
+                                <table class="table table-bordered">
+                                     <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th width="40%">Personal Development</th>
+                                        <th>Weight</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                    </thead>
+                                    <tbody id="pdp_list">
+
+                                    </tbody>
+                                </table>
+                                 </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
