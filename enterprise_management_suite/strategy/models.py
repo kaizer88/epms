@@ -2,8 +2,13 @@ import datetime
 
 from django.db import models
 from django.core.files.storage import FileSystemStorage
+<<<<<<< HEAD
+# from enterprise_management_suite.organisation.models import Programme, Branch
+# from accounts.models import Employee
+=======
 from organisation.models import Programme, Branch
 from accounts.models import Employee
+>>>>>>> master
 
 REVISIONS_MANDATES = FileSystemStorage(location='media/strategy/overview/rev_mandates')
 RESOURCE_PLANS = FileSystemStorage(location='media/strategy/strat_obj/rsc_plans')
@@ -29,7 +34,11 @@ Departmental Strategic Overview - PART A -- Start
 class Overview(TimeStampedModel):
     # TODO add uuid as ID
     """ Strategic overview of the branch / department """
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+>>>>>>> master
     priority_programme = models.CharField(max_length=50, null=True, blank=True)
     vision = models.TextField(null=True, blank=True)
     mission = models.TextField(null=True, blank=True)
@@ -40,7 +49,11 @@ class Overview(TimeStampedModel):
     mtef_budget = models.DecimalField(decimal_places=2, default=00.00, max_digits=10)
     analysis = models.TextField(null=True, blank=True)
     is_signed = models.BooleanField(default=False)
+<<<<<<< HEAD
+    signed_user = models.ForeignKey('accounts.Employee', null=True, blank=True, on_delete=models.CASCADE)
+=======
     signed_user = models.ForeignKey(Employee, null=True, blank=True, on_delete=models.CASCADE)
+>>>>>>> master
 
     def __str__(self):
         return "{}{}".format(self.branch.name, self.id)
@@ -54,7 +67,11 @@ Departmental Strategic Objectives /StrategicObjective - PART B -- Start
 class Framework(TimeStampedModel):
     """StrategicDetail Planning and Development"""
 
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+>>>>>>> master
     year = models.CharField(max_length=4)
     obj_id = models.UUIDField(unique=True)
 
@@ -105,10 +122,17 @@ class StrategicOutput(TimeStampedModel):
 
 
 class Objective(TimeStampedModel):
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+    framework = models.ForeignKey(Framework, null=True, on_delete=models.CASCADE)
+    strategic_outputs = models.ManyToManyField(StrategicOutput)
+    programme = models.ForeignKey('organisation.Programme', null=True, on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
     framework = models.ForeignKey(Framework, null=True, on_delete=models.CASCADE)
     strategic_outputs = models.ManyToManyField(StrategicOutput)
     programme = models.ForeignKey(Programme, null=True, on_delete=models.CASCADE)
+>>>>>>> master
     objective = models.TextField(null=True, blank=True)
     baseline = models.TextField(null=True, blank=True)
     justification = models.TextField(null=True, blank=True)
@@ -122,7 +146,11 @@ class Objective(TimeStampedModel):
 
 class Subprogramme(TimeStampedModel):
     objective = models.ManyToManyField(Objective)
+<<<<<<< HEAD
+    linked_programme = models.ForeignKey('organisation.Programme', related_name="linked_programme", on_delete=models.CASCADE, null=True)
+=======
     linked_programme = models.ForeignKey(Programme, related_name="linked_programme", on_delete=models.CASCADE, null=True)
+>>>>>>> master
     subprogramme = models.TextField(null=True, blank=True)
     index_no = models.CharField(max_length=5, blank=True, null=True)
     purpose = models.TextField(null=True, blank=True)
@@ -143,7 +171,11 @@ class Imperatives(TimeStampedModel):
 class Risk(TimeStampedModel):
     """ Organisational risks"""
     framework = models.ForeignKey(Framework, null=True, on_delete=models.CASCADE)
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+>>>>>>> master
     desc = models.TextField(null=True, blank=True)
     likelihood = models.CharField(max_length=100, blank=True, null=True)
     impact = models.TextField(null=True, blank=True)
@@ -162,7 +194,11 @@ Departmental Strategic Links to Other Plans - PART C -- Start
 
 class LinksToPlans(TimeStampedModel):
     """ Links to other plans """
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+>>>>>>> master
     link = models.CharField(max_length=100, null=True, blank=True)
 
 
@@ -173,6 +209,10 @@ Departmental Strategic Annexture /addendum - PART D -- Start
 
 class Annexture(TimeStampedModel):
     """ link to annexture / addendum """
+<<<<<<< HEAD
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE)
+=======
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+>>>>>>> master
     reference = models.CharField(max_length=255, null=True, blank=True)
 

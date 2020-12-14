@@ -1,8 +1,13 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 
+<<<<<<< HEAD
+# from enterprise_management_suite.accounts.models import Employee
+# from enterprise_management_suite.organisation.models import Branch, Component, Organisation, Programme
+=======
 from accounts.models import Employee
 from organisation.models import Branch, Component, Organisation, Programme
+>>>>>>> master
 
 TEMPLATES = FileSystemStorage(location='media/ppm/projects/templates')
 PLANS = FileSystemStorage(location='media/ppm/projects/plan')
@@ -55,11 +60,19 @@ class Project(TimeStampedModel):
     CHALLENGED = 'Challenged'
     CANCELLED = 'Cancelled'
 
+<<<<<<< HEAD
+    organisation = models.ForeignKey('organisation.Organisation', on_delete=models.CASCADE, null=True)
+    programme = models.ForeignKey('organisation.Programme', on_delete=models.CASCADE, null=True)
+    branch = models.ForeignKey('organisation.Branch', on_delete=models.CASCADE, null=True)
+    component = models.ForeignKey('organisation.Component', on_delete=models.CASCADE, null=True)
+    project_manager = models.ForeignKey('accounts.Employee', on_delete=models.CASCADE, null=True)
+=======
     organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE, null=True)
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE, null=True)
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE, null=True)
     component = models.ForeignKey(Component, on_delete=models.CASCADE, null=True)
     project_manager = models.ForeignKey(Employee, on_delete=models.CASCADE, null=True)
+>>>>>>> master
     name = models.CharField(max_length=100)
     start_date = models.DateField()
     end_date = models.DateField()

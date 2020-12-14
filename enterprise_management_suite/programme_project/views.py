@@ -5,7 +5,12 @@ from datetime import datetime
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
+<<<<<<< HEAD
+from .models import Project, ProjectType, Status
+# from .models import Organisation, Programme, Branch, Component, Project, ProjectType, Status
+=======
 from .models import Organisation, Programme, Branch, Component, Project, ProjectType, Status
+>>>>>>> master
 from accounts.models import Employee
 from organisation.models import Programme, SubProgramme
 

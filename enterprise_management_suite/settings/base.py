@@ -35,6 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+    'enterprise_management_suite',
+=======
+>>>>>>> master
     'programme_project',
     'home',
     'employee_performance',
